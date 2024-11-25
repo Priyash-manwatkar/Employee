@@ -2,7 +2,7 @@ const BASE_URL = 'http://localhost:8080';
 
 export const GetAllEmployees = async (search = '', page = 1, limit = 5) => {
     const url =
-        `${BASE_URL}/api/employees?search=${search}&page=${page}&limit=${limit}`;
+        `${BASE_URL}/api/employee?search=${search}&page=${page}&limit=${limit}`;
     const options = {
         method: 'GET',
         headers: {
@@ -21,7 +21,7 @@ export const GetAllEmployees = async (search = '', page = 1, limit = 5) => {
 
 export const GetEmployeeDetailsById = async (id) => {
     const url =
-        `${BASE_URL}/api/employees/${id}`;
+        `${BASE_URL}/api/employee/${id}`;
     const options = {
         method: 'GET',
         headers: {
@@ -40,7 +40,7 @@ export const GetEmployeeDetailsById = async (id) => {
 
 export const DeleteEmployeeById = async (id) => {
     const url =
-        `${BASE_URL}/api/employees/${id}`;
+        `${BASE_URL}/api/employee/${id}`;
     const options = {
         method: 'DELETE',
         headers: {
@@ -59,7 +59,7 @@ export const DeleteEmployeeById = async (id) => {
 
 
 export const CreateEmployee = async (empObj) => {
-    const url = `${BASE_URL}/api/employees`;
+    const url = `${BASE_URL}/api/employee`;
     console.log('url ', url);
     // Create a FormData object
     const formData = new FormData();
@@ -83,7 +83,7 @@ export const CreateEmployee = async (empObj) => {
 };
 
 export const UpdateEmployeeById = async (empObj, id) => {
-    const url = `${BASE_URL}/api/employees/${id}`;
+    const url = `${BASE_URL}/api/employee/${id}`;
     console.log('url ', url);
     // Create a FormData object
     const formData = new FormData();
